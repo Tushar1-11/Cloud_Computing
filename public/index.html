@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adaptive Load Testing Platform</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Adaptive Load Testing Platform</h1>
+      <p>Cloud-ready app demo for scalable application testing</p>
+    </header>
+
+    <section class="controls card">
+      <h2>Server Controls</h2>
+      <div class="button-group">
+        <button id="testApiBtn">Test API</button>
+        <button id="refreshMetricsBtn">Refresh Metrics</button>
+        <button id="healthBtn">Check Health</button>
+      </div>
+      <div id="responseBox" class="response-box">Waiting for action...</div>
+    </section>
+
+    <section class="dashboard">
+      <div class="card stat-card">
+        <h3>Total Requests</h3>
+        <p id="totalRequests">0</p>
+      </div>
+
+      <div class="card stat-card">
+        <h3>Success Requests</h3>
+        <p id="successRequests">0</p>
+      </div>
+
+      <div class="card stat-card">
+        <h3>Failed Requests</h3>
+        <p id="failedRequests">0</p>
+      </div>
+
+      <div class="card stat-card">
+        <h3>Average Delay</h3>
+        <p id="avgDelay">0 ms</p>
+      </div>
+
+      <div class="card stat-card">
+        <h3>Last Delay</h3>
+        <p id="lastDelay">0 ms</p>
+      </div>
+
+      <div class="card stat-card">
+        <h3>Uptime</h3>
+        <p id="uptime">0 s</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
