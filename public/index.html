@@ -7,53 +7,85 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <h1>Adaptive Load Testing Platform</h1>
-      <p>Cloud-ready app demo for scalable application testing</p>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="tag">Cloud Computing Project</p>
+        <h1>Adaptive Load Testing Platform</h1>
+        <p class="subtitle">
+          Monitor API health, traffic, latency, and failure behavior in real time.
+        </p>
+      </div>
+      <div class="hero-status">
+        <span class="badge online">Server Dashboard</span>
+      </div>
     </header>
 
-    <section class="controls card">
-      <h2>Server Controls</h2>
-      <div class="button-group">
-        <button id="testApiBtn">Test API</button>
-        <button id="refreshMetricsBtn">Refresh Metrics</button>
-        <button id="healthBtn">Check Health</button>
-      </div>
-      <div id="responseBox" class="response-box">Waiting for action...</div>
-    </section>
+    <main class="grid">
+      <section class="panel controls">
+        <h2>Control Panel</h2>
+        <p>Use these actions to interact with the backend and observe live metrics.</p>
 
-    <section class="dashboard">
-      <div class="card stat-card">
-        <h3>Total Requests</h3>
-        <p id="totalRequests">0</p>
-      </div>
+        <div class="button-row">
+          <button id="testApiBtn">Test API</button>
+          <button id="refreshBtn" class="secondary">Refresh Metrics</button>
+          <button id="healthBtn" class="ghost">Check Health</button>
+        </div>
 
-      <div class="card stat-card">
-        <h3>Success Requests</h3>
-        <p id="successRequests">0</p>
-      </div>
+        <div class="response-wrapper">
+          <h3>Live Response</h3>
+          <pre id="responseBox">Waiting for action...</pre>
+        </div>
+      </section>
 
-      <div class="card stat-card">
-        <h3>Failed Requests</h3>
-        <p id="failedRequests">0</p>
-      </div>
+      <section class="panel overview">
+        <h2>System Overview</h2>
+        <div class="card-grid">
+          <div class="metric-card">
+            <span>Total Requests</span>
+            <strong id="totalRequests">0</strong>
+          </div>
+          <div class="metric-card">
+            <span>Successful Requests</span>
+            <strong id="successRequests">0</strong>
+          </div>
+          <div class="metric-card">
+            <span>Failed Requests</span>
+            <strong id="failedRequests">0</strong>
+          </div>
+          <div class="metric-card">
+            <span>Average Delay</span>
+            <strong id="avgDelay">0 ms</strong>
+          </div>
+          <div class="metric-card">
+            <span>Last Delay</span>
+            <strong id="lastDelay">0 ms</strong>
+          </div>
+          <div class="metric-card">
+            <span>Failure Rate</span>
+            <strong id="failureRate">0%</strong>
+          </div>
+          <div class="metric-card">
+            <span>Uptime</span>
+            <strong id="uptime">0 s</strong>
+          </div>
+          <div class="metric-card">
+            <span>Last Status</span>
+            <strong id="lastStatus">Idle</strong>
+          </div>
+        </div>
+      </section>
 
-      <div class="card stat-card">
-        <h3>Average Delay</h3>
-        <p id="avgDelay">0 ms</p>
-      </div>
-
-      <div class="card stat-card">
-        <h3>Last Delay</h3>
-        <p id="lastDelay">0 ms</p>
-      </div>
-
-      <div class="card stat-card">
-        <h3>Uptime</h3>
-        <p id="uptime">0 s</p>
-      </div>
-    </section>
+      <section class="panel about full-width">
+        <h2>Project Highlights</h2>
+        <ul>
+          <li>Simulates variable delay and failure behavior</li>
+          <li>Supports Grafana + k6 based performance testing</li>
+          <li>Displays live metrics through a clean dashboard</li>
+          <li>Helps identify overload and breakdown points</li>
+        </ul>
+      </section>
+    </main>
   </div>
 
   <script src="/app.js"></script>
